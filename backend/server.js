@@ -12,6 +12,7 @@ const app = express()
 app.use(express.json())
 app.use(express.urlencoded({extended: false})) //se coloca extended: false para que se ponga en consola como objeto
 app.use("/api/tareas", require("./routes/tareasRoutes"))
+app.use("/api/users", require("./routes/usersRoutes"))
 
 app.use(errorHandler) //con esto le digo a la app que usare un manejador de errores
 
